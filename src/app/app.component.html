@@ -7,8 +7,20 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Propiedades</h1>
+    <button [disabled]="btnDisabled">Enviar</button>
+    <input type="text" [value]="name" />
+    <progress max="100" [value]="age"></progress>
+    <img width="100" [src]="img" />
+    <hr />
+    <h1>Propiedades usando objetos</h1>
+    <button [disabled]="btnDisabled">Enviar</button>
+    <input type="text" [value]="person.name" />
+    <progress max="100" [value]="person.progress"></progress>
+    <img width="100" [src]="person.avatar" />
+    <hr />
     <h1>Hola Mundo</h1>
-    <h2>{{ 'HolanMundo'.repeat(5) }}</h2>
+    <h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
     <p>3 + 3 = {{ 3 + 3 }}</p>
     <h3>Hola soy {{ name }} y vivo en el {{ city }}</h3>
     <img src="{{ img }}" alt="image" srcset="" />
