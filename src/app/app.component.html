@@ -14,6 +14,19 @@
     <button (click)="increaseAge()">Age++</button>
     <hr />
 
+    <div class="box" (scroll)="onScroll($event)">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident rem
+        quis dignissimos eius saepe, cum esse et quasi ullam nemo. Alias
+        repudiandae ullam quas delectus ratione laudantium hic voluptatibus
+        accusamus.
+      </p>
+    </div>
+    <div>
+      <p>Nombre: {{ person.name }}</p>
+      <input type="text" [value]="person.name" (keyup)="changeName($event)" />
+    </div>
+    <hr />
     <h1>Propiedades</h1>
     <button [disabled]="btnDisabled">Enviar</button>
     <input type="text" [value]="name" />
