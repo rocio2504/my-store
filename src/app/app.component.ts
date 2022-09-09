@@ -18,5 +18,13 @@ export class AppComponent {
     city: 'Callao',
     avatar: 'https://conectajuarez.com/wp-content/uploads/2020/06/n7-1.jpg',
     progress: 70,
+    age: 18,
+  }
+
+  toggleButton() {
+    this.btnDisabled = !this.btnDisabled
+  }
+  increaseAge() {
+    this.person.age += 1
   }
 }
