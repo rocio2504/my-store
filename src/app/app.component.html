@@ -7,6 +7,19 @@
     <title>My project</title>
   </head>
   <body>
+    <h1>*ngSwitch</h1>
+    <p>(escribir: -nicolas-rocio-andrea)</p>
+    <input type="text" [(ngModel)]="person.name" />
+    <div [ngSwitch]="person.name">
+      <p *ngSwitchCase="'nicolas'">La persona es Nicolas</p>
+      <p *ngSwitchCase="'rocio'">La persona es Rocio</p>
+      <p *ngSwitchCase="'andrea'">La persona es Andrea</p>
+      <p *ngSwitchDefault>No hace Match</p>
+    </div>
+    <!--<p *ngIf="person.name === 'nicolas'">La persona es Nicolas</p>
+    <p *ngIf="person.name === 'rocio'">La persona es Rocio</p>
+    <p *ngIf="person.name === 'andrea'">La persona es Andrea</p>-->
+    <hr />
     <h1>*ngFor Obj</h1>
     <div>
       <div *ngFor="let product of products">
