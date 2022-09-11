@@ -21,6 +21,17 @@ export class AppComponent {
     age: 18,
   }
 
+  //names: string[] | number [] = ['Nico', 'Juli', 'Santi']
+  names: string[] = ['Nico', 'Juli', 'Santi']
+  newName = ''
+  addName() {
+    this.names.push(this.newName)
+    this.newName = ''
+  }
+
+  deleteName(index: number) {
+    this.names.splice(index, 1)
+  }
   toggleButton() {
     this.btnDisabled = !this.btnDisabled
   }
