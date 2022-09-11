@@ -7,6 +7,26 @@
     <title>My project</title>
   </head>
   <body>
+    <h1>Ng Model</h1>
+    <p>Nombre: {{ person.name }}</p>
+    <input
+      type="text"
+      required
+      #nameInput="ngModel"
+      [(ngModel)]="person.name"
+    />
+    <p>Valid: {{ nameInput.valid }}</p>
+    <p>Age: {{ person.age }}</p>
+    <input
+      type="number"
+      max="18"
+      min="10"
+      required
+      #ageInput="ngModel"
+      [(ngModel)]="person.age"
+    />
+    <p>Valid: {{ ageInput.valid }}</p>
+    <hr />
     <h1>Eventos</h1>
     <button [disabled]="btnDisabled">Enviar</button>
     <button (click)="toggleButton()">Toggle Button</button>
